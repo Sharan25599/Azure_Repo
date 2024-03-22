@@ -10,7 +10,11 @@ from pyspark.sql.functions import *
 
 #Mount from ADF pipeline
 
-
+source='wasbs://bronze@adlsgen2storagedemo.blob.core.windows.net/'
+mountpoint = '/mnt/mountpointstorageadf'
+key='fs.azure.account.key.adlsgen2storagedemo.blob.core.windows.net'
+value='H3wCjGz4E9GZGdxVGbwRomywoo6k2Y5Wwerut7owez5DDSR3tEwhiusJagkaUaZZhWV7nWCaAVR+AStXsbk5Q=='
+mounting_from_adf(source,mountpoint,key,value)
 
 # COMMAND ----------
 
